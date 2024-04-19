@@ -29,3 +29,12 @@ pytorch2aifes.convert_to_fnn_f32_express(model, 'path/to/location')
 ## Documentation
 
 For a detailed documentation see [here](https://fraunhofer-ims.github.io/AIfES-Converter/).
+
+
+## Build
+
+At the root of the project:
+
+```bash
+python3 -m build
+```

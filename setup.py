@@ -56,11 +56,12 @@ setup(
     package_dir={"": "src"},
     packages=find_packages(where="src"),
 
-    python_requires=">=3.7, <3.10",
+    python_requires=">=3.7, <=3.10.12",
 
     install_requires=[
                       "numpy>=1.19",
-                      "packaging"
+                      "packaging",
+                      "importlib_resources"
                       ],
 
     extras_require={
@@ -70,8 +71,8 @@ setup(
     },
 
     include_package_data=True,
-    # data_files=[('./src/aifes/aifes_code_generator/templates/aifes', ['src/aifes/aifes_code_generator/templates/aifes/aifes_f32_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_f32_weights.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_q7_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_q7_weights.h']),
-    #             ('./src/aifes/aifes_code_generator/templates/aifes_express',['src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_f32_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_f32_weights.h','src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_q7_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_q7_weights.h'])],
+    data_files=[('./src/aifes/aifes_code_generator/templates/aifes', ['src/aifes/aifes_code_generator/templates/aifes/aifes_f32_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_f32_weights.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_q7_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes/aifes_q7_weights.h']),
+                ('./src/aifes/aifes_code_generator/templates/aifes_express',['src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_f32_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_f32_weights.h','src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_q7_fnn.h', 'src/aifes/aifes_code_generator/templates/aifes_express/aifes_e_q7_weights.h'])],
 
     project_urls={
         "Source": "https://github.com/Fraunhofer-IMS/AIfES-Converter/",

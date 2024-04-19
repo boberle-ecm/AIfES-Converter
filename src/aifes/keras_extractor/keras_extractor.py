@@ -74,8 +74,8 @@ class KerasExtractor:
             if self._is_dense_layer(curr_layer):
                 # Check if first layer, then we need to add an input layer
                 if x == 0:
-                    aifes_fnn_structure.append(AifesLayer_Input(self._model.layers[x].input_shape[1],
-                                                                self._model.layers[x].input_shape[1]))
+                    aifes_fnn_structure.append(AifesLayer_Input(self._model.layers[x].input.shape[1],
+                                                                self._model.layers[x].input.shape[1]))
 
                 # Add corresponding dense layer depending on if transposed layers should be used
                 if not self._use_transposed_layers:
